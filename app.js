@@ -331,7 +331,7 @@ if(err){
 
  
 
-    server.listen(3000, 'localhost');
+    server.listen(process.env.PORT,process.env.IP);
 server.on('listening', function() {
     console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 });
