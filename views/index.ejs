@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  
+
+	<link  type="text/css" href="views/public/assets/website.css">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredericka+the+Great&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f8792934ef.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="font-awesome.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap" rel="stylesheet">
+  <base href="/">
+<!-- css file here -->
+  <style>
+body{padding-top: 80px;
+	background: url(https://images.unsplash.com/photo-1592771580432-6f8a6c82e879?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+	background-attachment:  fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+
+
+	
+}
+
+.img-hover:hover{opacity: 1;}
+.navbar-toggler {
+  border-color: purple;
+} 
+i{
+	color: rgb(193, 38, 201);
+	font-size: 30px;
+	margin-left: 10px;
+}
+i:hover{
+color: white;
+transition: all 0.3s;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(200, 10, 0, 0),#18e9e3, rgba(0, 0, 200, 0));
+}
+#reflect {
+    -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.25)));
+}
+
+.name{
+	color: rgb(193, 38, 201);
+	margin-left: 10px;
+}
+/*.navbar-fixed-top  {
+top:-70px;
+opacity:0;
+}*/
+.navbar-text{ font-size: default;
+	color: rgb(32, 49, 199);
+	font-family: aerial;
+	letter-spacing: 1px;
+}
+
+.follow{color: rgb(32, 49, 199);
+	font-size: 30px;
+	margin: 0 0;
+	font-family:Fredericka the Great ;
+}
+.jumbotron{
+	text-align: center;
+}
+
+/*.btn-info{
+	background: transparent;
+}*/
+.card-padding{
+color: white;
+	}
+.navbar-toggler-icon{
+color: white;
+
+	}
+.pink{
+	color:#ff1476;
+	transition: all 0.3s;
+}
+.pink:hover{
+	color: #eaf;
+}
+
+.fixed{
+  -webkit-box-shadow: 2px 3px 10px 0px rgba(0,0,0,1) , 1px 2px 10px 0px white;
+-moz-box-shadow: 2px 3px 10px 0px rgba(0,0,0,1);
+box-shadow: 2px 3px 10px 0px rgba(0,0,0,1);
+}
+.solid-navbar{
+  background-color :#18e9e3;
+  opacity: 0.85;
+  transition:all 0.6s;
+}
+ .btn-info{
+   color : black;
+  background-color: #18e9e3;
+}
+
+  </style>
+ <!-- css ends here -->
+</head>
+<body>
+  <!-- 
+   -->
+  <div class="container first">
+    
+   
+	<!-- starting navbar -->
+	<div class="navbar ">
+	    <nav class="navbar navbar-expand-md  fixed-top mb-5 ">
+          <a class="navbar-brand" href="/"><i class="fas fa-lock"></i><b class="name">MEMORY LOCKER</b></a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="   Toggle navigation">
+                 <span class="navbar-toggler-icon"> <i class="fas fa-align-center"></i>
+                 </span>
+             </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                       <a class="nav-link pink" href="/">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link pink" href="/">About Me</a>
+                     </li>
+     
+                     
+                     </ul>
+   <!-- sinup and sin in  -->
+                     <span class="navbar-text pr-3 pink" style="font-family: default;">
+                      <% if(!user){ %>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a  class="nav-link pink" href="/signup" style="display: inline;">SIGN UP</a><i style="font-size: 20px;" class="fas fa-user-plus"></i>
+                            </li>
+                            <li class="nav-item">
+                              <a  class="nav-link pink" href="/login" style="display: inline;">LOG IN</a><i style="font-size: 20px;" class="fas fa-user"></i>
+                            </li>
+            
+                            
+                            </ul>
+                        
+                       
+                     
+                    
+                
+                      <% } else{ %>
+                        
+                        <h5 style="display: inline;"><a  class="nav-link pink" href="/logout" style="display: inline;">LOG OUT</a></h5><i class="fas fa-sign-out-alt"></i>
+                      <% } %>
+                       
+                     </span>
+                       <!-- <li class="nav-item dropdown pb-2 pr-5 d-none d-lg-block ">
+                            <a  class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-align-justify pink"></i>
+                            </a>
+                            <div class="dropdown-menu bg-transparent border-none" aria-labelledby="navbarDropdown">
+                               <a style="color: #ff1476;"class="dropdown-item" href="#">Action</a>
+                               <a style="color: #ff1476;" class="dropdown-item" href="#">Another action</a> -->
+         <!--  <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a> -->
+                           <!-- </div>
+                        </li> -->
+
+   
+                    </div>
+                </nav>
+    </div>
+  <!-- navbar ends -->
+  <% if(user){ %>
+  <div class="jumbotron text-center bg-transparent">
+   
+      <h1 style="color:#ff1476; font-family: 'Cutive Mono', monospace;"> <span class="mr-2" style="font-size: 1.5em;">Welcome "<%=user.username %>"</span></h1>
+    </div>
+     <% } else{ %>
+       
+
+  
+  <% } %>
+
+
+
+
+
+<div class="row">
+  <div class="col-md-9">
+  <div  class="jumbotron container bg-transparent"><h1 class="mb-5 name text-center" id="reflect" >
+    <i class="fas fa-user-lock mr-3"></i>LOCK YOUR MEMORIES HERE</h1>
+    <div>
+      <h1 style="color:#18e9e3; font-family: 'Caveat', cursive;"><em>“Life is not what One lived, but what One remembers and how One remembers it in order to recount it”</em></h1>
+    <h4 style="color: rgb(236, 113, 160);  border-left: 5px solid  #18e9e3; padding-left: 10px;"><p style="text-align: left; font-family: 'Gentium Basic', serif; ">Oscar Wilde once said, <em>“Memory… is the diary that we all carry about with us.”</em> We always have our memory in our pockets and it would leave a smile on our face every time we remember it – but imagine a life without memories to recall? Wouldn’t it be very depressing and very boring? Memories are very essential in our lives because they allow us to grow and learn to be a better person. Our recollections can teach us very important life lessons, demonstrate skills and abilities and can make us feel happy and entertained. There are so much more things that our memories can do and how beneficial it is in our lives.</p>
+    </h4>
+    <a href="/mystories" class="btn btn-info">BLOGS</a>
+    </div>
+    
+  </div>
+   <div class="well">
+    <div  class="jumbotron container bg-transparent text-left"><h1 class="mb-5 name text-center" id="reflect" >
+      <i class="fas fa-images mr-3"></i>MY PHOTO GALLERY</h1>
+      <!-- <h2 class="name pl-5" style="text-align: left; color: #ff1476;">Go through my photogallery</h2> -->
+    
+      
+      
+          <h1><p style="color:#18e9e3; font-family: 'Caveat', cursive;"><em>“The best thing about a picture is that it never changes, even when the people in it do.”</em></p></h1>
+        
+      <h4 style="color: rgb(236, 113, 160); font-family: 'Gentium Basic', serif; border-left: 5px solid  #18e9e3; padding-left: 10px;">
+        
+        Photographs play an important role in everyone’s life – they connect us to our past, they remind us of people, places, feelings, and stories. They can help us to know who we are.
+        <p>Photographs, even of buildings, can be vital memory cues for Forgotten Australians and Former Child Migrants. For some people, images of Homes are as important and as treasured as some people’s family albums. On the Find & Connect website, our state-based historians sourced as many photographs of children’s institutions as possible – the aim was to have at least one photograph for each entry about a Home.</p>
+      </h4>
+      <div class="text-center">
+        <a href="/photogallery" class="btn btn-info mb-5" >PHOTO GALLERY</a>
+    
+      </div>
+      
+    
+  </div>
+   </div>
+   
+
+
+   </div>
+   <div class="col-md-3" >
+     
+    <div class="card mb-5 mt-5 fixed" style="width: 18rem; background-color: #D4D4D4; ">
+      <div class="card-body">
+        <h5 class="card-title" > <b><span style="font-family: 'Cutive Mono', monospace;">ONE FREE LOGIN</span></b></h5>
+       
+        <p class="card-text" style="font-family: 'Gentium Basic', serif;">
+          <ul>
+            <li>After login you can create your own space.</li>
+            <li>You can comment on other person's blog.</li>
+            <li>You can like any blog post you want.</li>
+          </ul>
+        </p>
+       
+      </div>
+      
+    </div>
+    <hr>
+    <div class="well">
+      <div class="card mb-5 mt-5 fixed" style="width: 18rem; background-color: #D4D4D4;">
+        <img class="card-img-top" src="https://zeeshaanmanji.me/wp-content/uploads/2019/03/lets-connect.png" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">You can email me at abhi013lamba@gmail.com.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="well">
+      <div class="card mb-5 mt-5 fixed" style="width: 18rem; background-color: #D4D4D4;">
+        <img class="card-img-top" src="followme.svg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">You can follow me on .</p>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram "></i></a><a href="https://www.instagram.com"><i class="fab fa-facebook"></i></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="well">
+      <div class="card mb-5 mt-5 fixed" style="width: 18rem; background-color: #D4D4D4;">
+        
+        <div class="card-body">
+          <p class="card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+        </div>
+      </div>
+    </div>
+
+   </div>
+   </div>
+
+	
+	
+</div>
+
+
+
+
+	
+	
+
+
+
+ 
+
+
+
+
+
+
+<!-- JAVA SCIPT AND J QUERY SOURCES -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="our_talks.js"></script>
+</body>
+</html>

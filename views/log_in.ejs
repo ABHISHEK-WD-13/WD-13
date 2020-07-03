@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredericka+the+Great&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f8792934ef.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Overlock+SC&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        body{/*padding-top: 80px;*/
+	background: url(https://images.pexels.com/photos/399161/pexels-photo-399161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-attachment:  fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*filter: blur(8px);
+  -webkit-filter: blur(8px);*/	
+}
+h1{
+    margin-bottom: 20px;
+}
+input{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+
+}
+input:focus{
+    background: transparent;
+    outline: none;
+
+}
+button{
+    width: 100%;
+    margin-top: 15px;
+}
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  
+}
+.hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#818078), to(transparent));
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color:black;
+  background-color: #EBCDD0;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="row">
+         <div class="col-md-6" >
+            <div style="margin:35% auto; width: 40%; ">
+                <h1 class="text-center"><i class="fas fa-user mr-2" style=" font-size: 2rem;"></i>LOG IN</h1>
+                  <form action="/login" method="POST">
+                   <i class="fas fa-user-edit" style=" font-size: 2rem;"></i> <input class="bg-transparent" type="text" placeholder="username" name="username" ><br>
+                   <i class="fas fa-key" style=" font-size: 2rem; margin-right: 8px;"></i> <input class="bg-transparent" type="password" placeholder="password" name="password"><br>
+                      <button class="btn btn-success">LOG IN</button>
+                  </form>
+                  <hr class="hr-text" data-content="OR">
+                  <a href="/signup"> <button class="btn btn-success">SIGN UP</button></a>
+              </div>  
+              
+            
+         </div>
+    </div>
+        
+      
+ 
+</body>
+</html>

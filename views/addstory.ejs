@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link  rel="stylesheet"  type="text/css" href="addstory.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredericka+the+Great&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f8792934ef.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Overlock+SC&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div class="container"> 
+        <div class="jumbotron bg-transparent text-center"><h1>ADD YOUR OWN STORY:</h1></div>
+        
+        <div style="width: 50%; margin: 0px auto;">
+        <div class="form-group">
+           
+            <form method="POST" action="/mystories">
+                <input  name="name" required='' type='text'>
+                <label alt='YOUR GOOD NAME' placeholder='YOUR GOOD NAME' ></label>
+                <input name="title" required='' type='text'>
+                <label  alt='STORY TITLE' placeholder='STORY TITLE'></label>
+                <input name="image" required='' type='text'>
+                <label  alt='IMAGE URL' placeholder='IMAGE URL'></label>
+               <textarea required='' class="text" name="story" id="" cols="30" rows="10" placeholder="YOUR STORY" style="padding-left: 20px; "></textarea>
+                <label alt='YOUR STORY' required placeholder='YOUR STORY'></label>
+                <input type="submit" class="rounded-pill btn btn-primary" name="" id="">
+              </form>
+        </form>
+    
+    </div>
+</div>
+    
+</body>
+</html>

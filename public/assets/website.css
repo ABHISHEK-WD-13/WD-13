@@ -1,0 +1,88 @@
+body{padding-top: 80px;
+	background: url(https://images.unsplash.com/photo-1524439188326-e47322d1cef2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+	background-attachment:  fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+
+
+	
+}
+html{
+	/*height: 100%;
+	background: url(aaron-boris-VxbMTmtRG5Q-unsplash.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+.img-hover:hover{opacity: 1;}
+.navbar-toggler {
+  border-color: purple;
+} 
+i{
+	color: rgb(193, 38, 201);
+	font-size: 30px;
+	margin-left: 10px;
+}
+i:hover{
+color: white;
+transition: all 0.3s;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(200, 10, 0, 0), rgba(193, 38, 201,0.75), rgba(0, 0, 200, 0));
+}
+#reflect {
+    -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.25)));
+}
+
+.name{
+	color: rgb(193, 38, 201);
+	margin-left: 10px;
+}
+/*.navbar-fixed-top  {
+top:-70px;
+opacity:0;
+}*/
+.navbar-text{ font-size: default;
+	color: rgb(32, 49, 199);
+	font-family: aerial;
+	letter-spacing: 1px;
+}
+
+.follow{color: rgb(32, 49, 199);
+	font-size: 30px;
+	margin-right: 10px;
+	font-family:Fredericka the Great ;
+}
+.jumbotron{
+	text-align: center;
+}
+
+/*.btn-info{
+	background: transparent;
+}*/
+.card-padding{
+color: white;
+	}
+.navbar-toggler-icon{
+color: white;
+
+	}
+.pink{
+	color:#ff1476;
+	transition: all 0.3s;
+}
+.pink:hover{
+	color: #eaf;
+}
+.carousel-item .container-slide {
+    text-align: center;
+}
+
